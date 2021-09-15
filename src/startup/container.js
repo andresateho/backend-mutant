@@ -5,7 +5,7 @@ const config = require("../config");
 const app = require(".");
 
 // services
-
+const { MutantService } = require("../services");
 
 // controllers
 
@@ -27,7 +27,9 @@ container
         router: asFunction(Routes).singleton(),
         config: asValue(config)
     })
-    .register({})
+    .register({
+        MutantService: asClass(MutantService).singleton()
+    })
     .register({})
     .register({})
     .register({
