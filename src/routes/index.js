@@ -5,7 +5,7 @@ const compression = require("compression");
 require("express-async-errors");
 const { NotFoundMiddleware, ErrorMiddleware } = require("../middlewares");
 
-module.exports = function({}) {
+module.exports = function({ MutantRoutes }) {
     const router = express.Router();
     const apiRoutes = express.Router();
 
@@ -14,6 +14,8 @@ module.exports = function({}) {
         .use(cors())
         .use(helmet())
         .use(compression());
+
+    apiRoutes.use(MutantRoutes);
 
     router.use(apiRoutes);
 

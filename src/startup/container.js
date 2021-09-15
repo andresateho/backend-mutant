@@ -11,6 +11,7 @@ const { MutantService } = require("../services");
 const { MutantController } = require("../controllers");
 
 // routes
+const { MutantRoutes } = require("../routes/index.routes");
 const Routes = require("../routes");
 
 // models
@@ -33,7 +34,9 @@ container
     .register({
         MutantController: asClass(MutantController).singleton()
     })
-    .register({})
+    .register({
+        MutantRoutes: asFunction(MutantRoutes).singleton()
+    })
     .register({
         Mutant: asValue(Mutant)
     })
