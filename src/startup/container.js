@@ -13,6 +13,9 @@ const app = require(".");
 // routes
 const Routes = require("../routes");
 
+// models
+const { Mutant } = require("../models");
+
 const container = createContainer();
 
 container
@@ -23,6 +26,9 @@ container
     })
     .register({})
     .register({})
-    .register({});
+    .register({})
+    .register({
+        Mutant: asValue(Mutant)
+    });
 
 module.exports = container;
