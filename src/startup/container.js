@@ -8,7 +8,7 @@ const app = require(".");
 const { MutantService } = require("../services");
 
 // controllers
-
+const { MutantController } = require("../controllers");
 
 // routes
 const Routes = require("../routes");
@@ -30,7 +30,9 @@ container
     .register({
         MutantService: asClass(MutantService).singleton()
     })
-    .register({})
+    .register({
+        MutantController: asClass(MutantController).singleton()
+    })
     .register({})
     .register({
         Mutant: asValue(Mutant)
