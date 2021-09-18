@@ -1,5 +1,4 @@
 const wordSearchSolver = require('word-search-solver');
-const errorMiddleware = require('../middlewares/error.middleware');
 let _mutantService = null;
 
 class MutantController{
