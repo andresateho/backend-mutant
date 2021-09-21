@@ -44,7 +44,7 @@ class MutantController{
             return res.send();
         }else{
             return res.status(403).send();
-        }            
+        }
     }
 }
 
