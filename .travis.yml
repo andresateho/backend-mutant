@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - stable
+deploy:
+  provider: heroku
+  app: mutant-validation
+  api_key:
+    secure: 916ebfb5-9a63-43ad-860f-43f5b61a1b98
