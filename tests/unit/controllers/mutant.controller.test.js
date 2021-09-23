@@ -31,7 +31,7 @@ describe("Mutant Controller Test", () => {
         expect(expected).toMatchObject(response);
     });
 
-    /*it("Should return 200 if mutant", async () => {
+    it("Should return 200 if mutant", async () => {
         const mReq = { 
             body:{
                 dna: ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"],
@@ -46,9 +46,9 @@ describe("Mutant Controller Test", () => {
         const _mutantController = new MutantController({ MutantService });
         await _mutantController.create(mReq, mRes);
         expect(mRes.send).toBeCalled();
-    });*/
+    });
 
-    /*it("Should return 403 if not mutant", async () => {
+    it("Should return 403 if not mutant", async () => {
         let res = { status: jest.fn().mockReturnThis(), send: jest.fn() };
         const mReq = { 
             body:{
@@ -64,5 +64,5 @@ describe("Mutant Controller Test", () => {
         const _mutantController = new MutantController({ MutantService });
         await _mutantController.create(mReq, res);
         expect(mRes.send).not.toBeCalled();
-    });*/
+    });
 });
