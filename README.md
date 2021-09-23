@@ -30,8 +30,8 @@ No es necesario crear base de datos, actualmente se creó una base de datos en a
 
 ![APISwageer1](./screenshots/swageer1.PNG)
 
-![APISwageer2](./screenshots/swageer2.PNG)
+![APISwageer_IsMutant](./screenshots/swageer2.PNG)
 
-![APISwageer3](./screenshots/swageer3.PNG)
+![APISwageer_IsMutant_Data](./screenshots/swageer3.PNG)
 
-![APISwageer4](./screenshots/swageer4.PNG)
+![APISwageer_StatisticsMutant](./screenshots/swageer4.PNG)
