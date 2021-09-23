@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'mutantvalidation'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6c014d6e338a43de9b5e7263e9a267c2 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8c259f9d12e3488c8d85b37188c7cacc }}
         package: .
