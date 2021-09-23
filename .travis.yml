@@ -4,4 +4,5 @@ node_js:
 deploy:
   provider: heroku
   app: mutant-validation
-  api_key: ef8b6fa1-9e0f-4cb8-855d-bf8316ec8853
+  api_key: 
+    secure: ef8b6fa1-9e0f-4cb8-855d-bf8316ec8853
