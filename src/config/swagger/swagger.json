@@ -1,0 +1,95 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Backend Mutant App",
+    "version": "1.0.0",
+    "title": "Swagger Mutant",
+    "contact": {
+      "email": "andresateho@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "localhost:9700",
+  "basePath": "",
+  "tags": [
+    {
+      "name": "Mutant",
+      "description": "DNA validator to know if it is mutant or human"
+    }
+  ],
+  "schemes": ["http", "https"],
+  "paths": {
+    "/mutant/": {
+      "post": {
+        "tags": ["IsMutant"],
+        "summary": "Detect if a human is mutant sending the DNA sequence",
+        "description": "",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "dna",
+            "type": "object",
+            "description": "human dna",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Is a mutant"
+          },
+          "403": {
+              "description": "Not a mutant"
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/stats": {
+      "get": {
+        "tags": ["StatisticsMutant"],
+        "summary": "Returns a Json with the statistics of the DNA checks",
+        "description": "",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ApiResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "count_mutant_dna": {
+          "type": "integer",
+          "format": "int64",
+          "example": 5
+        },
+        "count_human_dna": {
+          "type": "integer",
+          "format": "int64",
+          "example": 5
+        },
+        "ratio": {
+          "type": "number",
+          "example": 50
+        }
+      }
+    }
+  }
+}
+  

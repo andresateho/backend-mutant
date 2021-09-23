@@ -6,15 +6,15 @@ const isValidRegex = (pattern, attr = 'g') => value => {
 
 const isValidLetters = isValidRegex('^[ATCG,]*$', 'i')
 
-const validConsultParams = (req, res, next) => {  
-    const pr = req.body.dna.toString();
-    if (!isValidLetters(req.body.dna.toString())) {
-      const error = new Error();
-      error.status = 400;
-      error.message = "Invalid dna";
-      throw error;
-    }
-    next();
+const validConsultParams = (req, res, next) => {
+  if (!req.body.dna || !isValidLetters(req.body.dna.toString())) {
+    const error = new Error();
+    error.status = 400;
+    error.message = "Invalid dna";
+    throw error;
   }
+    
+  next();
+}
 
   module.exports = validConsultParams;
