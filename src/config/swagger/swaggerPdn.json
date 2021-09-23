@@ -12,7 +12,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "localhost:9700",
+  "host": "mutantvalidation.azurewebsites.net",
   "basePath": "",
   "tags": [
     {
@@ -20,7 +20,7 @@
       "description": "DNA validator to know if it is mutant or human"
     }
   ],
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "paths": {
     "/mutant/": {
       "post": {
